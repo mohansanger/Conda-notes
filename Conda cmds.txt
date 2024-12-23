@@ -1,0 +1,34 @@
+1.Create an environment
+	conda create -n envName python=version #--name and -n are same, --envs and -e are the same. conda --help or conda -h , both are same
+	conda create --name snowflakes biopython #this will same same version of python
+        
+2.Change environments (activate/deactivate)
+        conda active envName #Environments are installed by default into the envs directory in your conda directory
+        conda deactivate
+
+3.List all environments
+	conda info --envs or conda info -e or conda env list
+
+4.Verify current environment
+	conda info --envs or conda info -e or conda env list # current environment highlighted with an '*' character
+
+5.Remove an environment
+	conda remove --name ExampleName --all #
+
+6.Share an environment
+         environment.yml #share your environment with another person, so they can re-create a test.
+         with all of its packages and versions, give them a copy of your environment.yml file.
+
+7.Export the environment file
+	 conda env export > environment.yml # This file handles the environment's pip packages as well as its conda packages
+         Email or copy the exported environment.yml file to the other person
+	 The other person will then need to create the environment by the following command:
+	 conda env create -f environment.yml
+
+8.Create environment file by hand
+	conda env create -f environment.yml #Manually can create Environment files by this cmd
+	example--
+	name: stats
+        dependencies:
+          - numpy
+          - pandas
