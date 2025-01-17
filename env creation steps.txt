@@ -1,0 +1,30 @@
+Following are the steps to install Python 3.9.18 on LD server:
+ 
+Step 1: Exclude the following libraries from requirement.txt file:
+ 
+	lexnlp==2.3.0 
+	flair==0.13.1
+	requests==2.28.1
+	numpy==1.23.4
+	torch==2.2.1	
+	h11==0.14.0
+	tqdm==4.64.1
+	
+	# ONLY FOR VQ
+	pydantic==1.10.18
+
+Step 2: Install python packages listed in requirement.txt file using pip install -r fileName command
+ 
+Step 3: Install the excluded libraries in step 1 sequentially via pip install package command
+ 
+Step 4: Download spacy models using the below commands:
+
+	pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host github.com --trusted-host objects.githubusercontent.com https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.0/en_core_web_lg-3.7.0-py3-none-any.whl
+
+	pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host github.com --trusted-host objects.githubusercontent.com https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.0/en_core_web_sm-3.7.0-py3-none-any.whl
+
+	pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host github.com --trusted-host objects.githubusercontent.com https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.7.0/en_core_web_trf-3.7.0-py3-none-any.whl
+
+Step 5: Put flair model in ml_models code dir for Python 3.9
+
+Step 6: Check scikit-learn instaled version 1.0.2
