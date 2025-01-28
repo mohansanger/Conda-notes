@@ -1,0 +1,6 @@
+Debugging techniques with PDB:
+pdb.set_trace(): Insert this line within your code to pause execution and enter the debugger at that point. 
+n (next): Execute the next line of code 
+s (step): Step into a function call 
+r (return): Continue execution until the current function returns 
+p variable_name: Print the value of a variable 
